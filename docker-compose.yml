@@ -11,7 +11,10 @@ services:
             - "1432:1433"
 
     colourapi:
-        image: teedee22/commander:latest
+        #image: teedee22/commander:latest
+        build:
+            context: ./
+            dockerfile: Dockerfile
         ports:
             - "443:443"
             - "8080:80"
